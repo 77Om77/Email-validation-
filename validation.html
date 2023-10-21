@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email validation</title>
+</head>
+<body>
+    
+    <form id="myform">
+     <label for="Email">Email:-</label>
+     <input type="text" name="Email" id="email">
+     <input type="submit" name="submit" id="submit" placeholder="submit">
+
+
+    </form>
+
+
+
+
+
+    <!-- script start -->
+ <script>
+
+    var form = document.getElementById('myform');
+    form.addEventListener('submit',function(){
+
+        var emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        var email = document.querySelector('#email').value;
+        if(email.match(emailRegex)){
+            alert('valid Email')
+        }
+        else{
+            alert('invalid Email')
+        }
+    } )
+
+ </script>
+</body>
+</html>
